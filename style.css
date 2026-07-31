@@ -1,0 +1,144 @@
+/* ===== CSS Variables ===== */
+:root {
+  --color-bg: #eef3f8;
+  --color-primary: #2f80ed;
+  --color-primary-dark: #1c64c9;
+  --color-text: #1f2937;
+  --color-muted: #6b7280;
+  --color-card-bg: #ffffff;
+  --color-error: #d64545;
+  --radius: 12px;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --font-main: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* ===== Reset ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background: linear-gradient(180deg, var(--color-bg), #dce7f3);
+  color: var(--color-text);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 16px;
+}
+
+/* ===== Layout ===== */
+.app {
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}
+
+.app__title {
+  font-size: 1.8rem;
+  margin-bottom: 24px;
+}
+
+/* ===== Search Form ===== */
+.search {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.search__input {
+  flex: 1;
+  padding: 12px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.search__input:focus {
+  border-color: var(--color-primary);
+}
+
+.search__button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: var(--radius);
+  background-color: var(--color-primary);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.search__button:hover {
+  background-color: var(--color-primary-dark);
+}
+
+/* ===== Status messages (loading / error) ===== */
+.status {
+  min-height: 20px;
+  margin-bottom: 16px;
+  font-size: 0.95rem;
+  color: var(--color-muted);
+}
+
+.status.error {
+  color: var(--color-error);
+  font-weight: 600;
+}
+
+/* ===== Weather Card ===== */
+.card {
+  background-color: var(--color-card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 24px;
+  text-align: left;
+}
+
+.card.hidden {
+  display: none;
+}
+
+.card__city {
+  text-align: center;
+  margin-bottom: 16px;
+  font-size: 1.4rem;
+  color: var(--color-primary-dark);
+}
+
+.card__details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card__row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+}
+
+.card__row strong {
+  margin-left: auto;
+}
+
+.card__icon {
+  font-size: 1.1rem;
+}
+
+/* ===== Responsive tweaks ===== */
+@media (max-width: 400px) {
+  .search {
+    flex-direction: column;
+  }
+
+  .search__button {
+    width: 100%;
+  }
+}

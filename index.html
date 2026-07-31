@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main class="app">
+    <h1 class="app__title">🌤️ Weather App</h1>
+
+    <!-- Search form -->
+    <form id="search-form" class="search" autocomplete="off">
+      <input
+        type="text"
+        id="city-input"
+        class="search__input"
+        placeholder="Enter city name..."
+        aria-label="City name"
+      />
+      <button type="submit" class="search__button">Search</button>
+    </form>
+
+    <!-- Status area: loading text and error messages -->
+    <p id="status-message" class="status" aria-live="polite"></p>
+
+    <!-- Weather result card (hidden until data is available) -->
+    <section id="weather-card" class="card hidden" aria-live="polite">
+      <h2 id="city-name" class="card__city"></h2>
+      <div class="card__details">
+        <p class="card__row">
+          <span class="card__icon">🌡️</span>
+          <span>Temperature:</span>
+          <strong id="temperature"></strong>
+        </p>
+        <p class="card__row">
+          <span class="card__icon">💧</span>
+          <span>Humidity:</span>
+          <strong id="humidity"></strong>
+        </p>
+        <p class="card__row">
+          <span class="card__icon">💨</span>
+          <span>Wind Speed:</span>
+          <strong id="wind-speed"></strong>
+        </p>
+        <p class="card__row">
+          <span class="card__icon">☀️</span>
+          <span>UV Index:</span>
+          <strong id="uv-index"></strong>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

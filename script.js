@@ -1,11 +1,8 @@
 // =======================================================
 // WeatherAPI.com configuration
 // =======================================================
-// Go to https://www.weatherapi.com/
-// Create a free account
-// Copy your API key
-// Replace "PASTE_YOUR_API_KEY_HERE" with your key
-const API_KEY = "PASTE_YOUR_API_KEY_HERE";
+
+const API_KEY = "4b1c97de69f34de29ec93416263107";
 const BASE_URL = "https://api.weatherapi.com/v1/current.json";
 
 // ===== DOM references =====
